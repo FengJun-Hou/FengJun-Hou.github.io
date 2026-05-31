@@ -1,6 +1,86 @@
-<!DOCTYPE HTML>
-  <html>
-  <body>
-  <h1>1</h1>
-  </body>
-  </html>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>科技前沿实验室</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            background: #f8f9fa;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(135deg, #2c3e50, #1a1a2e);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        h2 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; margin-bottom: 15px; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #2c3e50;
+            color: white;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🚀 科技前沿实验室</h1>
+        <p>聚焦AI·投资·科技革命</p>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <h2>📈 今日投资热点</h2>
+            <ul>
+                <li>AI算力需求激增带动芯片板块上涨</li>
+                <li>太空经济赛道融资同比增长120%</li>
+                <li>白银期货突破28美元/盎司（<a href="#">深度分析</a>）</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>🤖 AI工具库</h2>
+            <ul>
+                <li>大模型训练资源包下载</li>
+                <li>AI视频生成工具对比评测</li>
+                <li>Agent开发实战教程</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2023 科技前沿实验室 | 数据更新于 <span id="current-date"></span></p>
+    </footer>
+
+    <script>
+        // 显示当前日期
+        document.getElementById('current-date').textContent = new Date().toLocaleDateString();
+    </script>
+</body>
+</html>
