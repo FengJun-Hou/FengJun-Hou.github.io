@@ -556,5 +556,3 @@ body {
     .skill-card { min-width: 260px; }
 }
 
-    .sidebar:hover ~ .main-content { width: 100%; }
-}
