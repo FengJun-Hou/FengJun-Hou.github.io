@@ -1,87 +1,198 @@
+
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>科技前沿实验室</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            line-height: 1.6;
-            background: #f8f9fa;
-            color: #333;
-        }
-        header {
-            background: linear-gradient(135deg, #2c3e50, #1a1a2e);
-            color: white;
-            padding: 1rem;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 20px;
-        }
-        .card {
-            background: white;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        h2 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; margin-bottom: 15px; }
-        a { color: #3498db; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background: #2c3e50;
-            color: white;
-            margin-top: 2rem;
-        }
-    </style>
+    <title>NEXUS | 极客空间</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>🚀 科技前沿实验室</h1>
-        <p>聚焦AI·投资·科技革命</p>
-    </header>
+    <!-- 背景层 -->
+    <div class="bg-gradient"></div>
+    <div class="bg-particles" id="particles"></div>
 
-    <div class="container">
-        <div class="card">
-            <h2>📈 今日投资热点</h2>
-            <ul>
-                <li>AI算力需求激增带动芯片板块上涨</li>
-                <li>太空经济赛道融资同比增长120%</li>
-                <li>白银期货突破28美元/盎司（<a href="#">深度分析</a>）</li>
-                <li>2345678</li>
-            </ul>
+    <!-- 左侧侧边栏导航 -->
+    <aside class="sidebar">
+        <div class="logo-container">
+            <i class="fa-solid fa-cube logo-icon"></i>
+            <span class="logo-text">NEXUS</span>
         </div>
-
-        <div class="card">
-            <h2>🤖 AI工具库</h2>
+        
+        <nav class="side-nav">
             <ul>
-                <li>大模型训练资源包下载</li>
-                <li>AI视频生成工具对比评测</li>
-                <li>Agent开发实战教程</li>
+                <li class="nav-item active" data-target="home">
+                    <i class="fa-solid fa-house"></i>
+                    <span class="nav-text">首页概览</span>
+                </li>
+                <li class="nav-item" data-target="projects">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <span class="nav-text">项目展示</span>
+                </li>
+                <li class="nav-item" data-target="skills">
+                    <i class="fa-solid fa-microchip"></i>
+                    <span class="nav-text">技术栈</span>
+                </li>
+                <li class="nav-item" data-target="contact">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span class="nav-text">联系我</span>
+                </li>
             </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="#" class="social-btn"><i class="fa-brands fa-github"></i></a>
+            <a href="#" class="social-btn"><i class="fa-brands fa-twitter"></i></a>
         </div>
-    </div>
+    </aside>
 
-    <footer>
-        <p>© 2026 科技前沿实验室 | 数据更新于 <span id="current-date"></span></p>
-    </footer>
+    <!-- 主内容区域 -->
+    <main class="main-content">
+        <section id="home" class="content-section active-section">
+            <div class="hero-wrapper">
+                <div class="hero-text">
+                    <h1 class="glitch-title" data-text="DIGITAL REALITY">DIGITAL REALITY</h1>
+                    <p class="subtitle">探索代码与设计的边界</p>
+                    <div class="stats-row">
+                        <div class="stat-item">
+                            <span class="stat-num">5+</span>
+                            <span class="stat-label">年经验</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num">50+</span>
+                            <span class="stat-label">项目完成</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num">100%</span>
+                            <span class="stat-label">客户满意</span>
+                        </div>
+                    </div>
+                    <button class="cta-btn" onclick="document.querySelector('[data-target=\'projects\']').click()">
+                        查看作品 <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+                <div class="hero-visual">
+                    <!-- 土星环结构 -->
+                    <div class="saturn-ring ring-outer"></div>
+                    <div class="saturn-ring ring-inner"></div>
+                    <img src="https://picsum.photos/seed/tech/400/400" alt="科技感抽象艺术图" class="hero-img">
+                </div>
+            </div>
+        </section>
 
-    <script>
-        // 显示当前日期
-        document.getElementById('current-date').textContent = new Date().toLocaleDateString();
-    </script>
+        <section id="projects" class="content-section">
+            <h2 class="section-header">精选项目 <span class="line-deco"></span></h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="card-img-box">
+                        <img src="https://picsum.photos/seed/code1/600/400" alt="AI数据分析平台界面截图">
+                        <div class="overlay">
+                            <a href="#" class="view-btn"><i class="fa-solid fa-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3>AI 数据洞察平台</h3>
+                        <p>基于Python和React的大数据可视化分析系统。</p>
+                        <div class="tech-tags">
+                            <span>React</span><span>Python</span><span>D3.js</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="card-img-box">
+                        <img src="https://picsum.photos/seed/code2/600/400" alt="区块链钱包应用界面截图">
+                        <div class="overlay">
+                            <a href="#" class="view-btn"><i class="fa-solid fa-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3>去中心化钱包</h3>
+                        <p>支持多链资产管理的Web3浏览器扩展。</p>
+                        <div class="tech-tags">
+                            <span>Solidity</span><span>Vue3</span><span>Web3</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="card-img-box">
+                        <img src="https://picsum.photos/seed/code3/600/400" alt="智能家居控制中枢界面截图">
+                        <div class="overlay">
+                            <a href="#" class="view-btn"><i class="fa-solid fa-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3>IoT 智能中控</h3>
+                        <p>实时监控与控制家庭物联网设备的Dashboard。</p>
+                        <div class="tech-tags">
+                            <span>Node.js</span><span>MQTT</span><span>Socket.io</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="content-section">
+            <h2 class="section-header">核心技能 <span class="line-deco"></span></h2>
+            <div class="skills-container">
+                <div class="skill-group">
+                    <h3>前端开发</h3>
+                    <div class="skill-bar-wrap">
+                        <div class="skill-label"><span>HTML5/CSS3</span><span>95%</span></div>
+                        <div class="bar-bg"><div class="bar-fill" style="width: 95%"></div></div>
+                    </div>
+                    <div class="skill-bar-wrap">
+                        <div class="skill-label"><span>JavaScript/TS</span><span>90%</span></div>
+                        <div class="bar-bg"><div class="bar-fill" style="width: 90%"></div></div>
+                    </div>
+                    <div class="skill-bar-wrap">
+                        <div class="skill-label"><span>React/Vue</span><span>85%</span></div>
+                        <div class="bar-bg"><div class="bar-fill" style="width: 85%"></div></div>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3>后端 & 工具</h3>
+                    <div class="skill-bar-wrap">
+                        <div class="skill-label"><span>Node.js</span><span>80%</span></div>
+                        <div class="bar-bg"><div class="bar-fill" style="width: 80%"></div></div>
+                    </div>
+                    <div class="skill-bar-wrap">
+                        <div class="skill-label"><span>Python</span><span>75%</span></div>
+                        <div class="bar-bg"><div class="bar-fill" style="width: 75%"></div></div>
+                    </div>
+                    <div class="skill-bar-wrap">
+                        <div class="skill-label"><span>Docker/Git</span><span>85%</span></div>
+                        <div class="bar-bg"><div class="bar-fill" style="width: 85%"></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="content-section">
+            <h2 class="section-header">建立连接 <span class="line-deco"></span></h2>
+            <div class="contact-wrapper">
+                <form id="contactForm" class="cyber-form">
+                    <div class="form-group">
+                        <input type="text" id="name" required placeholder=" ">
+                        <label for="name">您的姓名</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" required placeholder=" ">
+                        <label for="email">电子邮箱</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="5" required placeholder=" "></textarea>
+                        <label for="message">留言内容</label>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <span>发送消息</span>
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
