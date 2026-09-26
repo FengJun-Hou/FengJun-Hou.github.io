@@ -3,36 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="一个安静、简洁的个人小站。">
-  <title>我的小站</title>
+  <meta name="description" content="一个普通散户的个人投资记录、市场观察与交易复盘。">
+  <title>慢慢投资｜一个散户的投资记录</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="site-shell">
     <aside class="sidebar">
-      <a class="brand" href="#home" aria-label="返回首页">
-        <span class="brand-mark">F</span>
-        <span class="brand-name">我的小站</span>
+      <a class="brand" href="#home">
+        <span class="brand-mark">慢</span>
+        <span class="brand-name">慢慢投资</span>
       </a>
 
       <nav class="side-nav" aria-label="主导航">
-        <button class="nav-item active" data-target="home">
-          <span class="nav-index">01</span>
-          <span>首页</span>
-        </button>
-        <button class="nav-item" data-target="about">
-          <span class="nav-index">02</span>
-          <span>关于</span>
-        </button>
-        <button class="nav-item" data-target="contact">
-          <span class="nav-index">03</span>
-          <span>联系</span>
-        </button>
+        <button class="nav-item active" data-target="home"><span class="nav-index">01</span><span>首页</span></button>
+        <button class="nav-item" data-target="notes"><span class="nav-index">02</span><span>投资笔记</span></button>
+        <button class="nav-item" data-target="method"><span class="nav-index">03</span><span>我的方法</span></button>
+        <button class="nav-item" data-target="about"><span class="nav-index">04</span><span>关于本站</span></button>
       </nav>
 
       <div class="sidebar-note">
         <span class="note-dot"></span>
-        <span>慢一点，也很好。</span>
+        <span>记录，而不是荐股。</span>
       </div>
     </aside>
 
@@ -40,79 +32,117 @@
       <section id="home" class="content-section active-section">
         <div class="hero">
           <div class="hero-copy">
-            <p class="eyebrow">WELCOME</p>
-            <h1>给生活留一点<br><em>从容的空间。</em></h1>
+            <p class="eyebrow">PERSONAL INVESTMENT JOURNAL</p>
+            <h1>一个普通散户，<br><em>慢慢学着投资。</em></h1>
             <p class="hero-intro">
-              这里没有喧闹的数字，也不急着证明什么。
-              只是记录一些值得留下的想法、发现与日常。
+              这里记录我对市场的观察、交易后的复盘、长期投资的思考，
+              以及那些让我付过学费的错误。
             </p>
-            <button class="text-link" data-target="about">
-              认识这个小站
-              <span aria-hidden="true">→</span>
-            </button>
+            <div class="hero-actions">
+              <button class="text-link" data-target="notes">看看投资笔记 <span>→</span></button>
+              <button class="text-link muted-link" data-target="method">我的投资方法 <span>→</span></button>
+            </div>
           </div>
 
-          <div class="hero-art" aria-hidden="true">
-            <div class="sun"></div>
-            <div class="orbit orbit-one"></div>
-            <div class="orbit orbit-two"></div>
-            <div class="leaf leaf-one"></div>
-            <div class="leaf leaf-two"></div>
-            <div class="art-caption">quiet / curious / present</div>
+          <div class="market-art" aria-hidden="true">
+            <div class="chart-grid"></div>
+            <svg viewBox="0 0 420 360" class="chart-line">
+              <path d="M18 292 C52 275, 65 286, 91 244 S130 265, 154 218 S193 231, 215 180 S251 204, 274 145 S310 170, 333 116 S364 135, 402 62"></path>
+            </svg>
+            <div class="chart-label">LONG TERM / DISCIPLINE</div>
+            <div class="chart-point point-a"></div>
+            <div class="chart-point point-b"></div>
+            <div class="chart-point point-c"></div>
           </div>
         </div>
 
+        <div class="notice">
+          <span class="notice-icon">i</span>
+          <p><strong>个人记录声明：</strong>本站内容仅代表作者个人的投资记录、经验与观点，不构成任何证券投资咨询、投资建议或收益承诺。读者应独立判断并自行承担投资风险。</p>
+        </div>
+
         <div class="home-footer">
-          <span>PERSONAL SPACE</span>
-          <span>·</span>
-          <span>STAY CURIOUS</span>
+          <span>PERSONAL JOURNAL</span><span>·</span><span>NO ADVICE / NO PROMISE</span>
+        </div>
+      </section>
+
+      <section id="notes" class="content-section">
+        <div class="section-intro">
+          <p class="eyebrow">INVESTMENT NOTES</p>
+          <h2>把每一次交易，<br>都当成一次学习。</h2>
+          <p>这里以后可以持续记录市场观察、交易复盘、行业研究和投资中的小心得。不追求预测正确，只尽量把自己的思考写清楚。</p>
+        </div>
+
+        <div class="note-grid">
+          <article class="note-card">
+            <span class="note-type">MARKET</span>
+            <h3>市场观察</h3>
+            <p>记录指数、行业和市场情绪的变化，以及当时为什么这样理解市场。</p>
+            <span class="note-placeholder">待记录 · 个人观察</span>
+          </article>
+          <article class="note-card">
+            <span class="note-type">REVIEW</span>
+            <h3>交易复盘</h3>
+            <p>记录买入、卖出、持有或没有操作之后的真实想法，尤其记录做错的地方。</p>
+            <span class="note-placeholder">待记录 · 交易复盘</span>
+          </article>
+          <article class="note-card">
+            <span class="note-type">LEARNING</span>
+            <h3>投资学习</h3>
+            <p>把看过的资料、研究过的行业和逐渐形成的认知整理下来。</p>
+            <span class="note-placeholder">待记录 · 学习笔记</span>
+          </article>
+          <article class="note-card">
+            <span class="note-type">LESSON</span>
+            <h3>交过的学费</h3>
+            <p>投资最有价值的记录，有时不是赚了多少，而是终于知道自己为什么会亏。</p>
+            <span class="note-placeholder">待记录 · 错误与反思</span>
+          </article>
+        </div>
+      </section>
+
+      <section id="method" class="content-section">
+        <div class="section-intro">
+          <p class="eyebrow">MY APPROACH</p>
+          <h2>先管好自己，<br>再谈市场。</h2>
+          <p>投资方法会不断变化。这里记录的是我现阶段对风险、仓位、持有和交易纪律的理解，而不是一套适用于所有人的标准答案。</p>
+        </div>
+
+        <div class="principles">
+          <div class="principle"><span>01</span><div><h3>先理解，再行动</h3><p>不因为市场热闹就急着参与。尽量先弄明白自己买的是什么。</p></div></div>
+          <div class="principle"><span>02</span><div><h3>控制风险</h3><p>任何单一判断都有可能出错，仓位和风险承受能力比预测更重要。</p></div></div>
+          <div class="principle"><span>03</span><div><h3>记录真实决策</h3><p>把买卖前的理由写下来，之后才能知道到底是运气还是方法。</p></div></div>
+          <div class="principle"><span>04</span><div><h3>接受不确定性</h3><p>不追求每一次都正确，也不把过去的收益当成未来收益的保证。</p></div></div>
         </div>
       </section>
 
       <section id="about" class="content-section">
         <div class="section-intro">
-          <p class="eyebrow">ABOUT</p>
-          <h2>这是一个留给自己的小角落。</h2>
+          <p class="eyebrow">ABOUT THIS SITE</p>
+          <h2>我是一个散户，<br>不是投资顾问。</h2>
           <p>
-            不追求把生活展示得很满，只保留真正想记录的东西。
-            以后可以慢慢放进文字、照片、阅读笔记，或者那些突然觉得有意思的发现。
+            这是一个纯粹的个人投资记录站。我会记录自己的市场观察、持仓思考、
+            交易复盘和学习过程，也会记录那些后来证明并不正确的判断。
           </p>
         </div>
 
-        <div class="about-grid">
-          <article class="soft-card">
-            <span class="card-number">A</span>
-            <h3>记录</h3>
-            <p>把零散的想法留下来，让时间替它们慢慢沉淀。</p>
-          </article>
-          <article class="soft-card">
-            <span class="card-number">B</span>
-            <h3>发现</h3>
-            <p>保留好奇心，偶尔认真研究一件自己感兴趣的事。</p>
-          </article>
-          <article class="soft-card">
-            <span class="card-number">C</span>
-            <h3>生活</h3>
-            <p>不必时时高效。舒服、稳定、有自己的节奏，也是一种答案。</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="contact" class="content-section">
-        <div class="section-intro contact-intro">
-          <p class="eyebrow">CONTACT</p>
-          <h2>如果你想留下什么，欢迎来这里。</h2>
-          <p>这里暂时不放公开联系方式。以后有想分享的内容，再慢慢补上。</p>
-        </div>
-
-        <div class="contact-card">
-          <span class="contact-symbol">✦</span>
-          <p>Keep a little room for what matters.</p>
+        <div class="about-box">
+          <div>
+            <span class="about-label">本站不提供</span>
+            <p>证券投资咨询、个股荐股、代客理财、收费投资建议或收益承诺。</p>
+          </div>
+          <div>
+            <span class="about-label">本站记录</span>
+            <p>个人观点、个人交易记录、公开信息整理与投资学习笔记。</p>
+          </div>
+          <div>
+            <span class="about-label">阅读方式</span>
+            <p>把它当成一个散户的投资日记，而不是投资决策依据。</p>
+          </div>
         </div>
       </section>
     </main>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
